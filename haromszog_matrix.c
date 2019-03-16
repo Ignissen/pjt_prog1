@@ -17,7 +17,8 @@ int main()
 	{
 		for(int j=0;j<i+1;j++)
 		{
-			tm[i][j]=k++;
+			tm[i][j]=k;
+			k+=1.1;
 		}
 	}
 	for(int i=0;i<num_rows;i++)

@@ -8,8 +8,6 @@
 #include <unistd.h>
 #include <string.h>
 
-typedef enum{false,true} bool;
-
 double
 atlagos_szohossz (const char *titkos, int titkos_meret)
 {
@@ -119,6 +117,7 @@ main (void)
                                     kulcs[7] = pi;
 
                                     exor_tores (kulcs, KULCS_MERET, titkos, p - titkos);
+                                    free(kulcs);
                                 }
 
     return 0;
