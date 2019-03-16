@@ -119,6 +119,7 @@ main (void)
                                     kulcs[7] = pi;
 
                                     exor_tores (kulcs, KULCS_MERET, titkos, p - titkos);
+                                    free(kulcs);
                                 }
 
     return 0;
