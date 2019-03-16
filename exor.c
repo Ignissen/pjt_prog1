@@ -6,11 +6,13 @@ int main(int argc, char *argv[])
 {
 	if(argc > 2)
 	{
-		if(strlen(argv[2])!=8)
+		//Ez csak a törő program tesztelése miatt volt fontos megadni, ugyanis a törő 
+		//program csak 8 karakter hosszúságú kulcsot tud törni.
+		/*if(strlen(argv[2])!=8)
 		{
 			printf("Bad key\n");
 			return -1;
-		}
+		}*/
 		FILE* fin = fopen(argv[1],"r");
 		if(fin==NULL)
 		{
