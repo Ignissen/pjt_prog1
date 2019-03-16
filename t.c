@@ -8,8 +8,6 @@
 #include <unistd.h>
 #include <string.h>
 
-typedef enum{false,true} bool;
-
 double
 atlagos_szohossz (const char *titkos, int titkos_meret)
 {
