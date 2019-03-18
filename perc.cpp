@@ -8,7 +8,7 @@ int main(int argc, char *argv[])
 	if(argc!=2)
 	{
 		cout<<"Így használd: ./perc bemenet.png"<<endl;
-		return -1; //User balfasz vót.
+		return -1;
 	}
 	png::image<png::rgb_pixel> png_img(argv[1]);
 	int s = png_img.get_width()*png_img.get_height();
