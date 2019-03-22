@@ -43,8 +43,8 @@ int main()
     {
         for (int j = 0; j < N; j++)
         {
-            real(C) = MINX + j * dx;
-            imag(C) = MAXY - i * dy;
+            C.real(MINX + j * dx);
+            C.imag(MAXY - i * dy);
 
             Z = 0;
             iteracio = 0;
