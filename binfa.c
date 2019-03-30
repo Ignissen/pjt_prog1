@@ -15,7 +15,7 @@ Node gyoker;
 
 Node* create_empty()
 {
-	Node* tmp = (Node*) malloc(sizeof(Node));
+	Node* tmp = &gyoker;
 	tmp->c= '/';
 	tmp->left = null;
 	tmp->right = null;
@@ -135,6 +135,7 @@ void postorder(Node* elem,int depth)
 		spaces[depth*2]='\0';
 
 		printf("%s%c\n",spaces,elem->c);
+		free(spaces);
 	}
 	else
 	{
@@ -173,8 +174,8 @@ int main(int argc, char** argv)
 {
 	srand(time(null));
 	fa = create_empty();
-	gyoker = *fa;
-	for(int i=0;i<100;i++)
+	//gyoker = *fa;
+	for(int i=0;i<10000;i++)
 	{
 		int x=rand()%2;
 		if(x)
