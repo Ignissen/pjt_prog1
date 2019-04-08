@@ -126,21 +126,24 @@ vector<vector<Square*>> update(vector<vector<Square*>> v)
         }
     }
 
+    int size1 = v.size();
+    int size2= v[0].size();
+
     for(int i=0;i<v.size();i++)
     {
-        for(int j=0;j<v[0].size();j++)
+        for(int j=0;j<size2;j++)
         {
             int live_neighbours = 0;
-            live_neighbours +=  v[(i-1)%v.size()][(j-1)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i-1)%v.size()][(j)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i-1)%v.size()][(j+1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(size1+i-1)%size1][(size2+j-1)%size2]->aliveState;
+            live_neighbours +=  v[(size1+i-1)%size1][(size2+j)%size2]->aliveState;
+            live_neighbours +=  v[(size1+i-1)%size1][(size2+j+1)%size2]->aliveState;
 
-            live_neighbours +=  v[(i)%v.size()][(j-1)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i)%v.size()][(j+1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(size1+i)%size1][(size2+j-1)%size2]->aliveState;
+            live_neighbours +=  v[(size1+i)%size1][(size2+j+1)%size2]->aliveState;
 
-            live_neighbours +=  v[(i+1)%v.size()][(j-1)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i+1)%v.size()][(j)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i+1)%v.size()][(j+1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(size1+i+1)%size1][(size2+j-1)%size2]->aliveState;
+            live_neighbours +=  v[(size1+i+1)%size1][(size2+j)%size2]->aliveState;
+            live_neighbours +=  v[(size1+i+1)%size1][(size2+j+1)%size2]->aliveState;
             //cout <<" X:"<<i << " y:"<< j << " Live neighbours:"<< live_neighbours<<endl;
             if(v[i][j]->aliveState)
             {
@@ -172,22 +175,22 @@ vector<vector<Square*>> update(vector<vector<Square*>> v)
     vector<vector<Square*>> tmp = v;
     
 
-    for(int i=0;i<v.size();i++)
+    for(int i=0;i<size1;i++)
     {
 
         for(int j=0;j<v[0].size();j++)
         {
             int live_neighbours = 0;
-            live_neighbours +=  v[(i-1)%v.size()][(j-1)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i-1)%v.size()][(j)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i-1)%v.size()][(j+1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(i-1)%size1][(j-1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(i-1)%size1][(j)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(i-1)%size1][(j+1)%v[0].size()]->aliveState;
 
-            live_neighbours +=  v[(i)%v.size()][(j-1)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i)%v.size()][(j+1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(i)%size1][(j-1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(i)%size1][(j+1)%v[0].size()]->aliveState;
 
-            live_neighbours +=  v[(i+1)%v.size()][(j-1)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i+1)%v.size()][(j)%v[0].size()]->aliveState;
-            live_neighbours +=  v[(i+1)%v.size()][(j+1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(i+1)%size1][(j-1)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(i+1)%size1][(j)%v[0].size()]->aliveState;
+            live_neighbours +=  v[(i+1)%size1][(j+1)%v[0].size()]->aliveState;
 
                 
             //cout <<" X:"<<i << " y:"<< j << " Live neighbours:"<< live_neighbours<<endl;
