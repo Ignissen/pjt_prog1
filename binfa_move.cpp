@@ -141,6 +141,7 @@ public:
 			spaces[depth*2]='\0';
 
 			printf("%s%c\n",spaces,elem->c);
+			free(spaces);
 		}
 		else
 		{
@@ -169,6 +170,7 @@ public:
 			spaces[depth*2]='\0';
 
 			printf("%s%c\n",spaces,elem->c);
+			free(spaces);
 		}
 		else
 		{
@@ -197,6 +199,7 @@ public:
 			spaces[depth*2]='\0';
 
 			printf("%s%c\n",spaces,elem->c);
+			free(spaces);
 		}
 		else
 		{

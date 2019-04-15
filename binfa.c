@@ -81,6 +81,7 @@ void inorder(Node* elem,int depth)
 		spaces[depth]='\0';
 
 		printf("%s%c\n",spaces,elem->c);
+		free(spaces);
 	}
 	else
 	{
@@ -107,6 +108,7 @@ void preorder(Node* elem,int depth)
 		spaces[depth*2]='\0';
 
 		printf("%s%c\n",spaces,elem->c);
+		free(spaces);
 	}
 	else
 	{
