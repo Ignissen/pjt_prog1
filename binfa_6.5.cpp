@@ -158,11 +158,6 @@ public:
 		//if(elem->c!='/') delete elem;
 		delete elem;
 	}
-	
-	static void print_size()
-	{
-		std::cout<< "méret: "<< sizeof(Node)<<std::endl;
-	}
 
 	Node* gyoker;
 
@@ -216,7 +211,5 @@ int main(int argc, char** argv)
 	{
 		usage();
 	}
-	//bfa.destroy_tree(bfa.gyoker);
-	bfa.print_size();
 	return 0;
 }
