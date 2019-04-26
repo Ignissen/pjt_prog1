@@ -148,11 +148,7 @@ def run(argv=['']):
 
     last_delta = time.time()
 
-    #agent_host.setObservationsPolicy()
 
-    #agent_host.sendCommand("tp 0 4 0")
-    #agent_host.sendCommand("time set 0")
-    agent_host.sendCommand("/effect MalmoTutorialBot minecraft:night_vision 300")
     
     # main loop:
     #agent_host.sendCommand( "jump 1")
