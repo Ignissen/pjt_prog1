@@ -104,7 +104,6 @@ def run(argv=['']):
     my_mission = MalmoPython.MissionSpec(missionXML, True)
     my_mission.timeLimitInSeconds( 300 )
     my_mission.requestVideo( 640, 480 )
-    #my_mission.observeGrid(-1,-1,-1,1,1,1,"GECI")
     
     #my_mission.rewardForReachingPosition( 19.5, 0.0, 19.5, 100.0, 1.1 )
     
