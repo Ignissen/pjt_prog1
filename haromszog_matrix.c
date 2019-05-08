@@ -5,12 +5,14 @@ int main()
 {
 	int num_rows = 5;
 	double **tm = (double**) malloc(sizeof(double*)*num_rows);
-
+	
+	printf("%p\n",&tm);
+	
 	for(int i=0;i<num_rows;i++)
 	{
 		tm[i]=(double*) malloc(sizeof(double)*(i+1));
 	}
-	
+	printf("%p\n",tm);
 	int k=0;
 
 	for(int i=0;i<num_rows;i++)
@@ -21,6 +23,9 @@ int main()
 			k+=1.1;
 		}
 	}
+	
+	printf("%p\n",tm[0]);
+	
 	for(int i=0;i<num_rows;i++)
 	{
 		for(int j=0;j<i+1;j++)
